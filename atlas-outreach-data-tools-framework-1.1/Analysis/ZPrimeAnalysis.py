@@ -1,8 +1,8 @@
 import ROOT
 import math
 
-import Analysis
-import AnalysisHelpers as AH
+import Analysis.Analysis as Analysis
+import Analysis.AnalysisHelpers as AH
 
 #======================================================================
         

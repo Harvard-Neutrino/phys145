@@ -8,6 +8,10 @@ import Analysis.Job as Job
 import Analysis.Disclaimer as DC
 from multiprocessing import Pool 
 
+import Analysis.TTbarAnalysis
+import Analysis.ZAnalysis
+import Analysis.ZPrimeAnalysis
+
 def buildProcessingDict(configuration, samples):
     if samples == "": 
         return configuration.Processes

@@ -1,9 +1,9 @@
 import ROOT
 import time
 
-import TupleReader as reader
-import HistManager
-import EventCounter
+import Analysis.TupleReader as reader
+import Analysis.HistManager as HistManager
+import Analysis.EventCounter as EventCounter
 
 #======================================================================
 

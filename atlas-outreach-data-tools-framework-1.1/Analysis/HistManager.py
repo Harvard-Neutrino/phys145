@@ -1,6 +1,6 @@
 import ROOT
 import time
-import StandardHistograms as SH
+import Analysis.StandardHistograms as SH
 
 #======================================================================
 
@@ -24,7 +24,7 @@ class HistManager(object):
 
     def addHistogram(self, histName, histogram):
         if histName in self.Histograms:
-            print "Histogram with name " + histName + " already defined!"
+            print("Histogram with name " + histName + " already defined!")
         else:
             self.Histograms[histName] = histogram
         return histogram
@@ -41,5 +41,5 @@ class HistManager(object):
 
     # Utility function
     def log(self, message):
-        print time.ctime() + " HistManager " + self.Name + ": " + message
+        print(time.ctime() + " HistManager " + self.Name + ": " + message)
         
