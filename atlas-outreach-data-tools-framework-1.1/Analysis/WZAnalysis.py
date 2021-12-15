@@ -1,9 +1,9 @@
 import ROOT
 import itertools 
 
-import Analysis
-import AnalysisHelpers as AH
-import Constants
+import Analysis.Analysis as Analysis
+import Analysis.AnalysisHelpers as AH
+import Analysis.Constants as Constants
 
 #======================================================================
         
@@ -79,8 +79,8 @@ class WZAnalysis(Analysis.Analysis):
       etmiss = self.Store.getEtMiss()
 
       # test candidate for WZ system
-      if not self.ZWindow(z1Lepton, z2Lepton) < -999: return False;# TO DO: Find a good value for this cut
-      if not AH.WTransverseMass(wLepton, etmiss) > -999: return False;# TO DO: Find a good value for this cut
+      if not self.ZWindow(z1Lepton, z2Lepton) < 8: return False;# TO DO: Find a good value for this cut
+      if not AH.WTransverseMass(wLepton, etmiss) > 50: return False;# TO DO: Find a good value for this cut
 
       # histograms for missing et
       self.hist_etmiss.Fill(etmiss.et(),weight)  

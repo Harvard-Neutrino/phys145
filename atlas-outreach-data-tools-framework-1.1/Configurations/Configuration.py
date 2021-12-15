@@ -1,7 +1,7 @@
 Job = {
     "Batch"           : True,
     "Analysis"        : "TTbarAnalysis",
-    "Fraction"        : 1,
+    "Fraction"        : .1,
     "MaxEvents"       : 1234567890,
     "OutputDirectory" : "results/"
 }

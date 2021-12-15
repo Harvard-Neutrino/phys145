@@ -8,7 +8,7 @@ with the number specifying the number of bins that will be merged into one.
 import ROOT
 from collections import OrderedDict
 
-import infofile
+import Plotting.infofile as infofile
 
 config      = dict()
 histoptions = OrderedDict()

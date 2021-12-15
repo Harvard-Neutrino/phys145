@@ -42,7 +42,7 @@ def initializeDepictions(Depictions):
         Depictions[2].initializeDepiction( 0.0,  0.0, 1.0, 0.25, 0.01, 0.1)
 
     else:
-        print "Not Supported Yet"
+        print("Not Supported Yet")
         sys.exit()
         
     bottomPad = Depictions[-1].pad
@@ -57,7 +57,7 @@ def drawItem(x, y, text, font = 42, size = 0.03, align = 11):
     l.DrawLatex(x,y,text);
 
 def writeXaxisTitle(Paintables):
-    xAxisTitle = Paintables[Paintables.keys()[0]].getHistogram().GetXaxis().GetTitle()
+    xAxisTitle = Paintables[list(Paintables.keys())[0]].getHistogram().GetXaxis().GetTitle()
     [p.getHistogram().SetXTitle("") for p in Paintables.values()]
     drawItem(0.95, 0.05, xAxisTitle, 42, 0.03, 33)
     
@@ -76,7 +76,7 @@ def drawLegend(paintables, paintingOrder):
     return legend
 
 def DrawPlot(configuration, histlocation):
-    print "Drawing plot: " + histlocation 
+    print ("Drawing plot: " + histlocation)
     canvas = ROOT.TCanvas( histlocation, "title", 900, 900 )
     
     Paintables = collectPaintables(configuration["Paintables"])

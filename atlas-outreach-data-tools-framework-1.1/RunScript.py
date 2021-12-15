@@ -11,6 +11,7 @@ from multiprocessing import Pool
 import Analysis.TTbarAnalysis
 import Analysis.ZAnalysis
 import Analysis.ZPrimeAnalysis
+import Analysis.WZAnalysis
 
 def buildProcessingDict(configuration, samples):
     if samples == "": 
